@@ -1,0 +1,19 @@
+<canvas width="400" height="600"></canvas>
+<script>
+    var pizarra = document.querySelector("canvas");
+    var pincel = pizarra.getContext("2d");
+    //Exterior
+    pincel.fillStyle="black";
+    pincel.beginPath();
+    pincel.moveTo(50,50);
+    pincel.lineTo(50,400);
+    pincel.lineTo(400,400);
+    pincel.fill();
+    //Interior
+    pincel.fillStyle="white";
+    pincel.beginPath();
+    pincel.moveTo(100,175);
+    pincel.lineTo(100,350);
+    pincel.lineTo(275,350);
+    pincel.fill();
+</script>

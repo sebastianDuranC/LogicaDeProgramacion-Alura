@@ -1,0 +1,14 @@
+<!-- Nuestro lienzo o pizarra -->
+<canvas width="600px" height="400"> </canvas>
+<script>
+    /* Conectar js con la etiqueta canvas */
+    var pizarra = document.querySelector("canvas");
+    /* Traemos todo el contenido que esta en la pantalla en una variable, trabajando en 2D (ancho y alto) */
+    var pincel = pizarra.getContext("2d");
+    /* Para definir el color usamos la propiedad fillstyle*/
+    pincel.fillStyle = "lightblue";
+    /* Vamos a diseñar una bandera */
+    /* Fill = llenar, rect = rectangulo */
+    /* Son 4 parametros (comienzo ejeX, comienzo ejeY, final ejeX, final ejeY) */
+    pincel.fillRect(0,0,600,400); // fondo es negro por defecto
+</script> 

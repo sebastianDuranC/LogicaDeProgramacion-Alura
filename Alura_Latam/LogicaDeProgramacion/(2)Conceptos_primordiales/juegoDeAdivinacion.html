@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivininacion</title>
+</head>
+<body>
+    <h1>
+        Juego de adivinacion
+    </h1>
+</body>
+<style>
+    h1{
+        text-align: center;
+        color: brown;
+        margin: 50px 0;
+    }
+</style>
+<script>
+        function saltoDeLineas(){
+        document.write("<br><br>");
+    }
+    function imprimir(mensaje){
+        document.write(mensaje);
+        saltoDeLineas();
+    }
+    function calcularIMC(peso, altura){
+        return peso / (altura * altura);
+    }
+    //Con la funcion Math.random() se genera un numero aleatorio entre 0 y 10
+    //Math.round() redondea el numero === Math.round(Math.random() * 10); == === parseInt(Math.random() * 10);
+    var numeroSecreto = parseInt(Math.random() * 10);
+    var numeroEntrada = parseInt(prompt("Ingrese un numero del 0 al 9"));
+    if(numeroSecreto == numeroEntrada){
+        imprimir("Felicidades, adivinaste el numero secreto");
+    }else{
+        imprimir("Lo siento, no adivinaste el numero secreto el cual era: " + numeroSecreto);
+    }
+</script>
+</html>

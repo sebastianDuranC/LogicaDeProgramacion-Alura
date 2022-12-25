@@ -1,0 +1,28 @@
+<canvas width="800" height="300"></canvas>
+<script>
+    var pizarra = document.querySelector("canvas");
+    var pincel = pizarra.getContext("2d");
+
+    pincel.fillStyle = "lightgreen";
+    pincel.fillRect(0,0,800,100); // x, y, ancho maximo, alto maximo
+
+    pincel.fillStyle = "white";
+    pincel.fillRect(0,100,800,200); // x, y, ancho maximo, alto maximo
+
+    pincel.fillStyle = "lightgreen";
+    pincel.fillRect(0,200,800,300); // x, y, ancho maximo, alto maximo
+
+    /* width = 800 | heigth = 300 */
+    pincel.fillStyle = "lightblue";
+    pincel.beginPath(); // Inicia un nuevo trazo/camino
+    //Aqui con moveTo indico donde empieza el trazo/camino y con lineTo indico los puntos que va a seguir
+    pincel.moveTo(400,150); // Mueve el pincel a la posicion indicada (x,y)
+    pincel.lineTo(200,300); // Dibuja una linea desde la posicion actual del pincel hasta la posicion indicada (x,y)
+    pincel.lineTo(600,300); // Dibuja una linea desde la posicion actual del pincel hasta la posicion indicada (x,y)
+    pincel.fill(); // Rellena el trazo/camino con el color actual del pincel
+    /* -------------------------------------------------------------------- */
+    pincel.fillStyle = "red";
+    pincel.beginPath(); // Inicia un nuevo trazo/camino
+    pincel.arc(400,150,100,0,2*3.1415); // Dibuja un circulo (anchocentro,altocentro,radio,anguloInicial,anguloFinal)
+    pincel.fill(); // Rellena el trazo/camino con el color actual del pincel
+</script>

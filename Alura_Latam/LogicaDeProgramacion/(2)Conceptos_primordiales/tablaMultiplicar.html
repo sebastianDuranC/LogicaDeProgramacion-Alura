@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    function imprimirTablaWhile(numero) {
+        var contador = 1;
+        while (contador <= 10) {
+            imprimir(numero + " x " + contador + " = " + (numero * contador));
+            contador = contador + 1;
+         }
+    }
+    function imprimirTablaFor(numero) {
+        for (var contador = 1; contador <= 10; contador = contador + 1) {
+            imprimir(numero + " x " + contador + " = " + (numero * contador));
+         }
+    }
+    var numero = parseInt(prompt("Ingrese el numero para calcular su tabla de multiplicar"));
+    imprimir("Tabla del " + numero + " con while");
+    imprimirTablaWhile(numero);
+    saltarLinea();
+    imprimir("Tabla del " + numero + " con for");
+    imprimirTablaFor(numero);
+</script>

@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<h1 style="color: red;"> Calcular el Imc</h1>
+<script>
+    function saltoDeLineas(){
+        document.write("<br><br>");
+    }
+    function imprimir(mensaje){
+        document.write(mensaje);
+        saltoDeLineas();
+    }
+    function calcularIMC(peso, altura){
+        return peso / (altura * altura);
+    }
+    /*
+    <18.5 = bajo peso
+    18.5 - 24.9 = peso normal
+    >=25.0 pro obesidad
+    25 - 29.9 = sobrepeso
+    30 - 34.9 = obesidad
+     */
+    var nombre = prompt("¿Cual es tu nombre?");
+    var peso = prompt("Ingrese su peso en kg");
+    var altura = prompt("Ingrese su altura en metros");
+    var resultadoIMC =calcularIMC(peso, altura);
+    if(resultadoIMC < 18.5){
+        imprimir("Hola " + nombre + " tu IMC es " + resultadoIMC + " y tienes bajo peso");
+    }else if(resultadoIMC >= 18.5 && resultadoIMC <= 24.9){
+        imprimir("Hola " + nombre + " tu IMC es " + resultadoIMC + " y tienes peso normal");
+    }else if(resultadoIMC >= 25 && resultadoIMC <= 29.9){
+        imprimir("Hola " + nombre + " tu IMC es " + resultadoIMC + " y tienes sobrepeso");
+    }else if(resultadoIMC >= 30.0){
+        imprimir("Hola " + nombre + " tu IMC es " + resultadoIMC + " y tienes obesidad");
+    }
+</script>

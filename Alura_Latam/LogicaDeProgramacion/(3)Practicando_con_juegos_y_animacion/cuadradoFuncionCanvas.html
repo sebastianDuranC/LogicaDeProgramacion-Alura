@@ -1,0 +1,21 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    function dibujarCuadrados(xInicio, yInicio, xFinal, yFinal, color){
+        var pizarra = document.querySelector("canvas");
+        var pincel = pizarra.getContext("2d");
+        pincel.fillStyle=color;
+        pincel.fillRect(xInicio, yInicio, xFinal, yFinal);
+//Para dibujar bordes usamos para color(strokeStyle) y el donde se va pintar borde(strokeRect)==fillRect()
+        pincel.strokeStyle="black";
+        pincel.strokeRect(xInicio, yInicio, xFinal, yFinal);
+    }
+/*  dibujarCuadrados(0,0,40,40,"green");
+    dibujarCuadrados(50,0,40,40,"red");
+    dibujarCuadrados(100,0,40,40,"blue");
+    dibujarCuadrados(150,0,40,40,"yellow"); */
+    for(var i = 0; i<=600; i+=50){
+        dibujarCuadrados(i,0,50,50,"red");
+        dibujarCuadrados(i,50,50,50,"yellow");
+        dibujarCuadrados(i,100,50,50,"green");
+    }
+</script>
